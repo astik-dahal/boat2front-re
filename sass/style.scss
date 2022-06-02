@@ -1,0 +1,461 @@
+@import "defaults";
+
+.container {
+  padding: 0 10px;
+  margin: 0 auto;
+  @include respond-to("phone-sm") {
+    padding: 0 16px;
+  }
+  @include respond-to("tablet") {
+    padding: 0 90px;
+  }
+
+  @include respond-to("desktop") {
+    padding: 0 120px;
+    max-width: 1400px;
+  }
+}
+
+.form-field {
+  height: 40px;
+  padding: 5px 136px 5px 16px;
+  border-radius: 30px;
+  border: none;
+  @include respond-to("desktop") {
+    height: 50px;
+    padding: 5px 140px 5px 16px;
+  }
+}
+.early-btn {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  border-radius: 30px;
+  padding: 0 10px;
+  background-color: $primary-accent;
+  color: white;
+  border: none;
+  @include respond-to("desktop") {
+    padding: 0 15px;
+    height: 50px;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+.section-intro-text {
+  text-align: center;
+  padding: 40px 0;
+  max-width: 500px;
+}
+input[type="submit"] {
+  cursor: pointer;
+  transition: all ease 20ms;
+  &:hover {
+    opacity: 0.95;
+  }
+}
+.eyebrow-headline {
+  letter-spacing: 2px;
+  color: white;
+  padding: 6px 16px;
+  background-color: rgba(255, 255, 255, 0.162);
+  border-radius: 20px;
+}
+.form-group {
+  position: relative;
+  text-align: center;
+  //   margin: auto;
+  max-width: 360px;
+  .email-field {
+    width: 100%;
+    position: relative;
+  }
+}
+
+// HERO SECTION
+.hero {
+  background: linear-gradient(
+      83.52deg,
+      rgba(51, 85, 171, 0.71) 2.12%,
+      rgba(114, 153, 255, 0.6887) 98.53%
+    ),
+    url("../assets/BoatHero.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  .divider {
+    position: absolute;
+    z-index: 1;
+    bottom: -10px;
+    width: 100%;
+  }
+  .waveline {
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+    width: 100%;
+  }
+  .pointer {
+    position: absolute;
+    z-index: 3;
+    bottom: 50px;
+    left: 50px;
+  }
+  @include respond-to("tablet") {
+    .waveline {
+      bottom: 5vw;
+    }
+    .pointer {
+      left: 210px;
+      bottom: 9vw;
+    }
+  }
+  @include respond-to("desktop") {
+    .pointer {
+      left: 610px;
+    }
+  }
+}
+
+.hero-container {
+  position: relative;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 160px;
+  @include respond-to("desktop") {
+    height: 800px;
+    padding-top: 100px;
+    align-items: flex-start;
+  }
+}
+.hero-text {
+  text-align: center;
+  //   padding-top: 0px;
+  color: white;
+  p {
+    margin-top: 16px;
+    font-size: 20px;
+  }
+  h1 {
+    margin-top: 5px;
+    font-size: 46px;
+  }
+  form {
+    margin-top: 40px;
+  }
+
+  @include respond-to("desktop") {
+    text-align: left;
+    padding-top: 120px;
+    small {
+      font-size: 16px;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: 400;
+      max-width: 300px;
+    }
+    h1 {
+      margin-top: 5px;
+      font-size: 56px;
+    }
+  }
+}
+.hero-image {
+  position: absolute;
+  padding-top: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 290px;
+  z-index: 4;
+  img {
+    @include image100;
+  }
+  @include respond-to("desktop") {
+    padding: 0;
+    left: 70%;
+    width: 405px;
+    // right: 0;
+  }
+}
+
+//DETAILS SECTION
+.details {
+  margin-top: 200px;
+  @include respond-to("desktop") {
+    margin-top: 150px;
+  }
+}
+.easy-to-use {
+  background: url("../assets/easytouse.png") no-repeat;
+  background-size: contain;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  .etu-text {
+    max-width: 400px;
+  }
+  @include respond-to("tablet") {
+    height: 600px;
+    align-items: center;
+    background-position: center right;
+    background-size: 600px;
+  }
+  @include respond-to("desktop") {
+    height: 650px;
+    align-items: center;
+    background-position: center right;
+    background-size: 650px;
+  }
+}
+.travel-through {
+  margin-top: 100px;
+  .tt-image {
+    height: 400px;
+    max-width: 500px;
+    img {
+      @include image100();
+    }
+  }
+  .tt-text {
+    margin-top: -50px;
+    max-width: 400px;
+  }
+  @include respond-to("tablet") {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+
+    width: 100%;
+    .tt-image {
+      position: absolute;
+      left: -130px;
+      z-index: 4;
+      height: 550px;
+      max-width: 700px;
+    }
+    .tt-text {
+      margin-right: 100px;
+      margin-bottom: 60px;
+    }
+  }
+  @include respond-to("desktop") {
+    .tt-image {
+      height: 680px;
+    }
+  }
+}
+
+//FEATURES SECTION
+.features {
+  margin-top: 50px;
+  padding: 0px 0px 50px;
+  background: linear-gradient(
+      83.52deg,
+      rgba(7, 10, 16, 0.858) 2.12%,
+      rgba(5, 7, 11, 0.806) 98.53%
+    ),
+    url("../assets/featuresimage.png") no-repeat center center;
+  color: white;
+  background-size: cover;
+  .features-container {
+    @include flexcencol;
+  }
+
+  @include respond-to("tablet") {
+    padding: 50px 0px 100px;
+  }
+  @include respond-to("desktop") {
+    padding: 100px 0px 150px;
+  }
+}
+
+.features-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .card {
+    height: 100%;
+    background-color: $primary-accent;
+    border-radius: 10px;
+    padding: 20px;
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      cursor: default;
+      user-select: none;
+    }
+  }
+  @include respond-to("tablet") {
+    flex-direction: row;
+    height: 360px;
+    gap: 10px;
+    justify-content: space-evenly;
+
+    .card {
+      height: 100%;
+      width: calc(100% / 5);
+      padding: 16px;
+
+      img {
+        height: 35px;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    }
+    @include respond-to("desktop") {
+      height: 280px;
+    }
+  }
+}
+
+// FINDING PLACES TO GO SECTION
+.places {
+  padding: 30px 0;
+  @include respond-to("tablet") {
+    padding: 70px 0;
+  }
+}
+.places-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.places-image {
+  margin-top: 30px;
+
+  max-width: 600px;
+  img {
+    @include image100();
+  }
+  @include respond-to("tablet") {
+    max-width: 800px;
+    margin-bottom: 0px;
+  }
+}
+
+//APP READY SECTION
+.appready {
+  background: url("../assets/appready.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .wide-text {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  .appready-intro-text {
+    padding-bottom: 20px;
+  }
+
+  .countdown {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    .time-card p {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .timeframe {
+      font-size: 0.8rem;
+      @include respond-to("tablet") {
+        font-size: 1rem;
+      }
+    }
+    .time {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      margin: 0px;
+      width: 60px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      @include respond-to("tablet") {
+        width: 90px;
+      }
+    }
+  }
+
+  form {
+    margin-bottom: 50px;
+    position: relative;
+    // max-width: 300px;
+    .early-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  @include respond-to("tablet") {
+    padding: 70px 0;
+  }
+}
+
+// FOOTER
+.footer {
+  color: white;
+  background-color: #2e2e2e;
+  padding: 20px 0;
+  font-size: 15px;
+  a {
+    color: white;
+    // text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .copyright {
+    opacity: 0.4;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+  .pages {
+    display: flex;
+    gap: 16px;
+  }
+  @include respond-to("desktop") {
+    .footer-container {
+      justify-content: center;
+      gap: 6px;
+    }
+    .copyright::after {
+      content: "|";
+    }
+    .pages {
+      gap: 6px;
+    }
+    a {
+      opacity: 0.4;
+    }
+    .privacy::after {
+      content: "|";
+    }
+  }
+}

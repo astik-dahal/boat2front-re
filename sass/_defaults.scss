@@ -1,0 +1,47 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "breakpoint";
+@import "fonts";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+::placeholder,
+input,
+button,
+input {
+  font-family: $font-default;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: $font-bold;
+}
+h1 {
+  font-size: 36px;
+  margin: 0.2em 0;
+  line-height: 100%;
+  @include respond-to("tablet") {
+    font-size: 38px;
+  }
+  @include respond-to("desktop") {
+    font-size: 42px;
+  }
+}
+
+p {
+  font-size: 16px;
+  @include respond-to("tablet") {
+    font-size: 17px;
+  }
+  @include respond-to("desktop") {
+    font-size: 18px;
+  }
+}

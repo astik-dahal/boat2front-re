@@ -532,6 +532,47 @@ input[type="submit"]:hover {
   position: relative;
 }
 
+header {
+  height: 110px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+header nav {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 110px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  header nav {
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .hero {
   background: linear-gradient(83.52deg, rgba(51, 85, 171, 0.71) 2.12%, rgba(114, 153, 255, 0.6887) 98.53%), url("../assets/BoatHero.png") no-repeat center;
   background-size: cover;
@@ -548,21 +589,18 @@ input[type="submit"]:hover {
 .hero .waveline {
   position: absolute;
   z-index: 2;
-  bottom: 30px;
+  bottom: 5vw;
   width: 100%;
 }
 
 .hero .pointer {
   position: absolute;
   z-index: 3;
-  bottom: 50px;
-  left: 50px;
+  bottom: 7vw;
+  left: 5vw;
 }
 
 @media (min-width: 992px) {
-  .hero .waveline {
-    bottom: 5vw;
-  }
   .hero .pointer {
     left: 210px;
     bottom: 9vw;
@@ -1050,7 +1088,7 @@ input[type="submit"]:hover {
     gap: 6px;
   }
   .footer .copyright::after {
-    content: "|";
+    content: " |";
   }
   .footer .pages {
     gap: 6px;
@@ -1061,5 +1099,33 @@ input[type="submit"]:hover {
   .footer .privacy::after {
     content: "|";
   }
+}
+
+.page-banner {
+  height: 350px;
+  background: linear-gradient(83.52deg, rgba(51, 85, 171, 0.71) 2.12%, rgba(114, 153, 255, 0.6887) 98.53%), url("../assets/BoatHero.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 40px;
+  text-align: left;
+  color: white;
+}
+
+.page-banner .page-title {
+  padding-top: 180px;
+  font-size: 62px;
+  font-weight: bold;
+}
+
+.privacy-policy article {
+  margin: 0 auto 40px;
+  line-height: 160%;
+}
+
+.privacy-policy h2 {
+  margin-bottom: 3px;
+}
+
+.privacy-policy p {
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
